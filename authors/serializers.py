@@ -13,3 +13,9 @@ class AuthorsSerializer(serializers.Serializer):
 
     def create(self, validated_data):
         return Authors.objects.create(**validated_data)
+    
+    def update(self, instance, validated_data):
+        instance.name = validated_data.get('name', instance.name)
+        instance.nationality = validated_data.get('nationality', instance.nationality)
+        instance.save()
+        return instance
