@@ -19,3 +19,10 @@ class AuthorsSerializer(serializers.Serializer):
         instance.nationality = validated_data.get('nationality', instance.nationality)
         instance.save()
         return instance
+
+
+# class BookSerializer(serializers.Serializer):
+#     id = serializers.IntegerField(read_only=True)
+#     title = serializers.CharField(required=True, max_length=100)
+    
+    

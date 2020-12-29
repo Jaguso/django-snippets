@@ -8,3 +8,8 @@ class Authors(models.Model):
 
     class Meta: 
         ordering = ['created']
+
+
+# class Book(models.Model):
+#     author = models.ForeignKey(Authors, on_delete=models.CASCADE)
+#     title = models.CharField(max_length=50, default='')
