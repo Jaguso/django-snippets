@@ -6,6 +6,7 @@ class Authors(models.Model):
     name = models.CharField(max_length=100, default='')
     nationality = models.CharField(max_length=50, default='')
     gender = models.CharField(max_length=50, default='male')
+    generation = models.CharField(max_length=50, default='')
 
     class Meta: 
         ordering = ['created']
